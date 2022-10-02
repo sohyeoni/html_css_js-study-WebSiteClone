@@ -1,0 +1,191 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;     /* 콘텐츠를 중앙으로 */
+    color: #3f464d;
+    font-family: "Spoqa Han Sans Neo", "Sans-serif";
+}
+
+a {
+    all: unset; /* a태그에 적용된 디자인들을 제거. 가상클래스는 제외됨 */
+}
+
+a:link {
+    text-decoration: none;
+    color: #3f464d;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #3f464d;
+}
+
+a:active {
+    text-decoration: none;
+    color: #3f464d;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #3f464d;
+}
+
+.inner {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;  
+    padding: 0 2rem; 
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    position: fixed;    /* 스크롤해도 위치가 고정되어 계속 보임 */
+    top: 0;
+    left: 0;
+    z-index: 1000;  /* 다른 요소와 겹쳤을 경우 제일 위에 표시 */
+}
+
+.head-container {
+    width: 100%;
+    height: 100%;
+    display: flex;  /* 내부 요소를 수평정렬 */
+    justify-content: space-between; /* 요소들이 양쪽 끝에 위치 */
+    align-items: center;    /* 내부요소를 수직정렬 */
+}
+
+.head-container .head-brand {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.head-container .head-brand a:hover {
+    color: #2186c4;
+    cursor: pointer;
+}
+
+.head-container .head-blog {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.head-container .head-blog a:hover {
+    color: #2186c4;
+    cursor: pointer;
+}
+
+/* section 태그 디폴트 설정 */
+section {
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+}
+
+.main {
+    height: 360px;
+    background-image: url("../img/main-img.jpg");
+    background-size: cover;
+    background-position: center 10%;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.main-container {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(47, 48, 89, 0.8);
+    z-index: 2;
+    margin-top: 60px;   /* 헤더의 높이만큼 간격을 두어 요소가 겹치지 않도록 */
+}
+
+.title-container {
+    padding: 100px 0;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 0.8rem;
+}
+
+.message {
+    font-size: 1.4rem;
+    font-weight: normal;
+    color: #fff;
+    line-height: 2rem;
+}
+
+.skill-container {
+    width: 100%;
+    height: 100%;
+    display: flex;  /* 내부 요소들을 수평 정렬하기 위해 설정 */
+    justify-content: space-around;  /* 요소들은 일정한 간격으로 정렬 (중심을 기준으로) */
+    align-items: center;
+}
+
+.skill {
+    width: 25%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 9px;
+    padding: 0.5rem 1rem;
+    margin: 0 1rem;
+    box-shadow: 10px 10px 10px -5px rgba(25, 42, 70, 0.2);
+}
+
+.skill-icon {
+    font-size: 2.5rem;
+    margin: 0 10px;
+}
+
+.skill-title {
+    display: flex;
+    flex-direction: column;
+    align-content: center;  /* 여러줄에 걸쳐 있어도 박스의 가운데에 요소가 정렬됨 */
+}
+
+.skill-name {
+    font-weight: bold;
+    color: #545e6f;
+    margin-bottom: 0.2rem;
+}
+
+.skill-usage {
+    font-size: 0.9rem;
+    color: #545e6f;
+}
+
+.python-style {
+    color: #2186c4;
+}
+
+.analysis-style{
+    color: #ff8066;
+}
+
+.ai-style {
+    color: #f7df1e;
+}
+
+.vue-style {
+    color: #2e7d32;
+}
+
+/* 가로 사이즈가 1200px 이상일 때 */
+@media only screen and (min-width: 1200px) {
+    .inner {
+        max-width: 1200px;      /* 1200px 이상이 되면 가운데로 모임 (이하면 화면에 꽉참) */
+    }
+}
+
+/* 980px 이하일 때 */
+@media only screen and (mix-width: 980px) {
+    .skill-container {
+        display: none;   /* 스킬 컨테이너 삭제 */
+    }
+}
