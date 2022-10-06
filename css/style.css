@@ -138,6 +138,12 @@ section {
     padding: 0.5rem 1rem;
     margin: 0 1rem;
     box-shadow: 10px 10px 10px -5px rgba(25, 42, 70, 0.2);
+    transition: 0.4s;
+}
+
+.skill:hover {
+    transform: translate(0, -5px);
+    cursor: pointer;
 }
 
 .skill-icon {
@@ -216,7 +222,7 @@ section {
 .class-list {
     display: flex;
     list-style: none;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     overflow: hidden;
 }
 
@@ -225,6 +231,13 @@ section {
     box-shadow: 10px 10px 10px -5px rgba(25, 42, 70, 0.2);
     border-radius: 8px;
     margin: 0 10px;
+    transition: 0.4s;
+}
+
+.class-card:hover {
+    box-shadow: 10px 10px 10px 0px rgba(25, 42, 70, 0.2);
+    transform: translate(0, -5px);
+    cursor: pointer;
 }
 
 .class-image {
@@ -235,13 +248,12 @@ section {
 
 .class-container {
     width: 100%;
-    padding: 0.5rem 1rem 1rem 1rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
 }
 
 .class-skill {
     display: flex;
     justify-content: space-between;
-
     align-items: center;
 }
 
@@ -275,6 +287,11 @@ section {
 .class-detail {
     font-size: 0.9rem;
     color: #0d47a1;
+    line-height: 1.5rem;
+}
+
+.roadmap-desc {
+    display: visible;
 }
 
 /* 가로 사이즈가 1200px 이상일 때 */
@@ -288,5 +305,9 @@ section {
 @media only screen and (max-width: 980px) {
     .skill-container {
         display: none;   /* 스킬 컨테이너 삭제 */
+    }
+
+    .roadmap-desc {
+        display: none;
     }
 }
