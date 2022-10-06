@@ -36,7 +36,8 @@ a:hover {
     width: 100%;
     height: 100%;
     margin: 0 auto;  
-    padding: 0 2rem; 
+    padding: 0 2rem;
+    overflow: hidden;
 }
 
 header {
@@ -125,6 +126,7 @@ section {
     display: flex;  /* 내부 요소들을 수평 정렬하기 위해 설정 */
     justify-content: space-around;  /* 요소들은 일정한 간격으로 정렬 (중심을 기준으로) */
     align-items: center;
+    padding: 1rem 0;
 }
 
 .skill {
@@ -176,6 +178,105 @@ section {
     color: #2e7d32;
 }
 
+.roadmap-container {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.roadmap-title-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.roadmap-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #545e6f;
+}
+
+.slide-prev {
+    font-size: 2rem;
+    cursor: pointer;
+    color: rgb(47, 48, 89);
+
+}
+
+.slide-next {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #cfd8dc;
+}
+
+.arrow-container {
+    display: flex;
+}
+
+.class-list {
+    display: flex;
+    list-style: none;
+    padding: 1rem 0;
+    overflow: hidden;
+}
+
+.class-card {
+    width: 240px;
+    box-shadow: 10px 10px 10px -5px rgba(25, 42, 70, 0.2);
+    border-radius: 8px;
+    margin: 0 10px;
+}
+
+.class-image {
+    width: 240px;
+    height: 150px;
+    border-radius: 8px 8px 0 0;
+}
+
+.class-container {
+    width: 100%;
+    padding: 0.5rem 1rem 1rem 1rem;
+}
+
+.class-skill {
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.class-type {
+    font-size: 0.9rem;
+    color: #949393;
+}
+
+.class-format {
+    font-size: 0.9rem;
+    color: #fff;
+    background-color: #0d47a1;
+    padding: 0.2rem;
+}
+
+.class-desc {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.class-title {
+    width: 100%;
+    font-weight: bold;
+    color: #545e6f;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 0.5rem;
+}
+
+.class-detail {
+    font-size: 0.9rem;
+    color: #0d47a1;
+}
+
 /* 가로 사이즈가 1200px 이상일 때 */
 @media only screen and (min-width: 1200px) {
     .inner {
@@ -184,7 +285,7 @@ section {
 }
 
 /* 980px 이하일 때 */
-@media only screen and (mix-width: 980px) {
+@media only screen and (max-width: 980px) {
     .skill-container {
         display: none;   /* 스킬 컨테이너 삭제 */
     }
