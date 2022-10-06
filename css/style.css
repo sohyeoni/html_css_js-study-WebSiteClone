@@ -227,11 +227,12 @@ section {
 }
 
 .class-card {
-    width: 240px;
+    max-width: 240px;
     box-shadow: 10px 10px 10px -5px rgba(25, 42, 70, 0.2);
     border-radius: 8px;
     margin: 0 10px;
     transition: 0.4s;
+    flex-shrink: 0;
 }
 
 .class-card:hover {
@@ -241,8 +242,7 @@ section {
 }
 
 .class-image {
-    width: 240px;
-    height: 150px;
+    max-width: 240px;
     border-radius: 8px 8px 0 0;
 }
 
@@ -292,6 +292,29 @@ section {
 
 .roadmap-desc {
     display: visible;
+}
+
+footer {
+    border-top: 1px solid #c4e4e4;
+    background-color: #f8f9fa;
+    padding: 1rem 0;
+    margin: 1rem 0;
+}
+
+.footer-message {
+    font-weight: bold;
+    color: #545e6f;
+    margin: 0.3rem 0.4rem;
+}
+
+.footer-contact {
+    color: #545e6f;
+    margin: 0.5rem 0.4rem;
+}
+
+.footer-copyright {
+    color: #545e6f;
+    margin: 1rem 0.5rem;
 }
 
 /* 가로 사이즈가 1200px 이상일 때 */
